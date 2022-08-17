@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::post('/login-two-factor/{user}', 'Auth\LoginController@login2FA')->name('login.2fa');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
